@@ -20,6 +20,8 @@ class SystemeGestionLaboratoire:
 
     def rechercher_reservation_par_etudiant(self, matricule):
         print(f"Réservations pour l'étudiant {matricule} :")
+        if not self.reservations:
+            print("Vous n'avez aucune reservation")
         for res in self.reservations:
             if hasattr(res.etudiant, 'matricule') and res.etudiant.matricule == matricule:
                 print(f"Équipement: {res.equipement.nom}, Quantité: {res.quantite}, Statut: {res.statut}")

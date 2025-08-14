@@ -1,6 +1,7 @@
 from personne import Etudiant, Gestionnaire
 from equipement import Equipement
 from systeme import SystemeGestionLaboratoire
+from menus import menu
 
 # Création du système
 systeme = SystemeGestionLaboratoire()
@@ -12,11 +13,10 @@ eq3 = Equipement("Balance", "EQ003", 10, "Chimie")
 systeme.equipements.extend([eq1, eq2, eq3])
 
 # Création des étudiants et gestionnaire
-etudiant1 = Etudiant("Ngoma", "Jean", "jean.ngoma@ulc.cd", "E001")
-etudiant2 = Etudiant("Kabasele", "Marie", "marie.kabasele@ulc.cd", "E002")
+etudiant1 = Etudiant("Lukemba", "John", "jean.ngoma@ulc.cd", "E001")
+etudiant2 = Etudiant("Miradi", "Malolo", "marie.kabasele@ulc.cd", "E002")
 etudiants_existants = [etudiant1, etudiant2]
-gestionnaire = Gestionnaire("Mbemba", "Paul", "paul.mbemba@ulc.cd")
+gestionnaire = Gestionnaire("Lukamba", "Nathan", "nathan@gmail.com")
 
 # --- Menu interactif ---
-from menus import menu
 menu(etudiants_existants, systeme, gestionnaire)
